@@ -15,9 +15,11 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+      # Use timestamp as the tag
     - name: Set timestamp
       run: echo "TIMESTAMP=$(date +%s)" >> $GITHUB_ENV
 
+      # Source: https://github.com/elgohr/Publish-Docker-Github-Action
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
