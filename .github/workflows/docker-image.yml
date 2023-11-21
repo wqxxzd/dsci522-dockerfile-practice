@@ -21,7 +21,7 @@ jobs:
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        name: wqxxzd/docker_practice_image_repo
+        name: wqxxzd/dsci522-dockerfile-practice
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         tags: ${{ env.TIMESTAMP }}
